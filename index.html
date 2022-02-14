@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>three.js app</title>
+    <style>
+      #main {
+        position: fixed;
+        top: 0;
+        left: 0;
+        border: 2px solid rgb(184, 33, 33);
+        border-radius: 2px;
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <canvas id="main">
+      <div>hello</div>
+    </canvas>
+    <main style="position: absolute; color: white;">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, repellat
+      aspernatur! Dolorem aut ullam autem similique fuga non fugiat atque harum
+      molestiae incidunt, nisi optio tenetur delectus distinctio ut sequi unde
+      minus et, ipsam labore. Adipisci deserunt molestias voluptatem. Ea fuga
+      explicabo laboriosam esse consectetur earum, error ipsa est. In
+      repellendus voluptates eveniet iusto cupiditate, illo consequuntur
+      accusantium iste non facilis nam tenetur alias iure at excepturi, magni
+      neque fugiat! Numquam sunt rem ullam reiciendis possimus sequi totam quo
+      non dolorum quis quam assumenda esse quas facilis id, officiis voluptatum
+      cupiditate laborum unde. Quibusdam culpa qui architecto porro inventore
+      ea, delectus officia dolorem repellat ut numquam dolorum. Saepe est,
+      accusantium iusto commodi magni velit fuga cupiditate totam officia,
+      possimus optio inventore nostrum consequatur ab excepturi quos sint ad aut
+      harum, aliquid necessitatibus dolore earum! Quidem quas tenetur est,
+      voluptate saepe, sapiente nihil facere architecto assumenda aut aliquam,
+      aliquid omnis natus quia corrupti similique! Sapiente dolorum rem
+      voluptate beatae, excepturi quo architecto fugiat voluptates? Ipsa
+      explicabo ratione optio ducimus est sapiente sit consequatur iure a harum?
+      Ratione voluptate animi nisi incidunt adipisci, ipsa tenetur. Iusto ipsa
+      modi temporibus accusamus? Asperiores ducimus soluta possimus deleniti
+      quas, inventore molestias laboriosam, nihil modi laborum iusto illo
+      perspiciatis, quisquam molestiae. Quidem fugiat deserunt dolor
+      dignissimos, corrupti beatae numquam magni velit quo cumque obcaecati
+      doloremque, at minima quis excepturi accusamus possimus perferendis natus,
+      repellat ducimus pariatur officiis ab. Assumenda maxime esse ullam, quo,
+      praesentium consequuntur, deleniti dolorum iusto natus minima nam!
+      Incidunt dolor rerum minus fugit nulla dicta, odio quisquam enim modi
+      veritatis labore porro. Laboriosam officiis vero atque temporibus
+      praesentium. Unde, ex iure illum, magnam repudiandae quidem ullam, maxime
+      adipisci ad quia sit error ratione. Porro nesciunt culpa dignissimos nam
+      commodi, explicabo praesentium iusto voluptas enim ratione modi quas ipsa
+      necessitatibus quos, voluptates tempora amet? Cupiditate praesentium minus
+      animi dignissimos, vel libero? Sapiente, eos repudiandae! Aut totam quam
+      minima voluptatem porro officia voluptatum, sit vel illum suscipit.
+      Accusamus, reiciendis. Facilis commodi consequuntur laborum nobis,
+      repellat aliquam deleniti necessitatibus repellendus beatae provident
+      aperiam vero adipisci, laudantium porro quam temporibus culpa dignissimos
+      voluptates ut ipsum? Eum repudiandae recusandae expedita aliquam ipsam
+      dolor. Consequatur numquam rem dolorum sed dolorem molestiae? Expedita
+      incidunt, natus hic deserunt, laborum perspiciatis consequuntur ad,
+      blanditiis sint similique distinctio ipsa omnis cum quis? Nam deserunt
+      veritatis minus ipsa quidem perferendis odit delectus velit facere saepe
+      at quos totam enim quo, repellendus, doloribus adipisci mollitia
+      consequatur iusto reprehenderit quis odio illum? Accusantium asperiores
+      eaque molestias aspernatur, non error a commodi dolores cumque consectetur
+      tenetur, eveniet rerum eligendi ad, necessitatibus laudantium dolor fuga
+      reiciendis! Deleniti cumque, assumenda consequuntur eius doloribus iure
+      magni, nemo quisquam molestias ad, debitis quidem velit voluptatibus
+      delectus rem omnis officia soluta aspernatur quis distinctio at id.
+      Reprehenderit error magni dicta quidem ratione sunt ducimus labore. Quo ea
+      eaque laudantium facilis aspernatur maiores error officiis ad enim impedit
+      aliquid, consequuntur labore sunt eum commodi nostrum iusto vero dolorem
+      ipsum perspiciatis nam consequatur esse quia quaerat. Necessitatibus, quas
+      magnam at eveniet tempora eum iste!
+<div>
+  empty
+</div>
+
+    </main>
+    <script type="module" src="main.js"></script>
+    <!-- <script type="module">
+      import * as THREE from "https://unpkg.com/three@0.120.1/build/three.module.js";
+
+      const scene = new THREE.Scene();
+
+      const camera = new THREE.PerspectiveCamera(
+        45,
+        window.innerWidth / window.innerHeight,
+        0.5,
+        1000
+      );
+
+      camera.position.setZ(20);
+
+      const renderer = new THREE.WebGLRenderer({
+        canvas: document.querySelector("main-content"),
+      });
+      renderer.setPixelRatio(window.devicePixelRatio);
+      renderer.setSize(window.innerWidth, window.innerHeight);
+
+      renderer.render(scene, camera);
+
+      const crystalGeometry = new THREE.OctahedronGeometry(1, 0);
+      const whiteBasicMaterial = new THREE.MeshBasicMaterial({
+        color: 0xffffff,
+      });
+      const whiteMaterial = new THREE.MeshStandardMaterial({ color: 0xffffff });
+      const shinyMaterial = new THREE.MeshStandardMaterial({
+        color: 0xffffff,
+        metalness: 0.1,
+        roughness: 0.2,
+        shininess: 0.9,
+        transparent: true,
+        opacity: 0.7,
+      });
+
+      const crystal = new THREE.Mesh(crystalGeometry, shinyMaterial);
+      scene.add(crystal);
+
+      renderer.render(scene, camera);
+    </script> -->
+
+    <!-- <script type="module">
+      import * as THREE from "https://unpkg.com/three@0.120.1/build/three.module.js";
+
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(
+        75,
+        window.innerWidth / window.innerHeight,
+        0.1,
+        1000
+      );
+
+      const renderer = new THREE.WebGLRenderer();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      document.body.appendChild(renderer.domElement);
+
+      const geometry = new THREE.BoxGeometry();
+      const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+      const cube = new THREE.Mesh(geometry, material);
+      scene.add(cube);
+
+      camera.position.z = 5;
+
+      function animate() {
+        requestAnimationFrame(animate);
+
+        cube.rotation.x += 0.01;
+        cube.rotation.y += 0.01;
+
+        renderer.render(scene, camera);
+      }
+
+      animate();
+    </script> -->
+  </body>
+</html>
