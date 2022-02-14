@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "0.0.0",
-  "homepage": "https://Vinayakporwal.github.io/portfolio",
+  "homepage": "https://vinayakporwal.github.io/portfolio",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
