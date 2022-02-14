@@ -1,7 +1,8 @@
 import * as THREE from "https://unpkg.com/three@0.120.1/build/three.module.js";
 import { OrbitControls } from "https://cdn.skypack.dev/three@0.120.1/examples/jsm/controls/OrbitControls.js";
 // import { searchForWorkspaceRoot } from "vite";
-import logo from "./earth.jpg";
+// import logo from "./earth.jpg";
+// import logo2 from "./logo2.png";
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(
   75,
@@ -20,7 +21,9 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 camera.position.setZ(30);
 
 const crystalGeometry = new THREE.SphereGeometry(10,100,100);
-const texture = new THREE.TextureLoader().load(logo);
+const crystalGeometry2 = new THREE.CubeGeometry(10,10,10);
+const texture = new THREE.TextureLoader().load('./earth.jpg');
+const texture4 = new THREE.TextureLoader().load('./logo2.png');
 // const shinyMaterial = new THREE.MeshStandardMaterial({
 //   color: 0x4086f4,
 //   metalness: 0.1,
@@ -32,8 +35,11 @@ const texture = new THREE.TextureLoader().load(logo);
 const shinyMaterial = new THREE.MeshStandardMaterial({
   map: texture,
 });
+const shinyMaterial2 = new THREE.MeshStandardMaterial({
+  map: texture4,
+});
 const cube = new THREE.Mesh(crystalGeometry, shinyMaterial);
-const cube2  = cube.clone();
+const cube2  =  new THREE.Mesh(crystalGeometry2, shinyMaterial2);
  
 cube2.position.set(20 , -50 , 10)
 
