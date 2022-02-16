@@ -1,11 +1,23 @@
-#main{
-  position: fixed;
-  top: 0px;
-  left: 0px;
+main{
+  position: absolute;
+margin: 0 2000px 0 0;
 }
-
+nav{
+  top:0;
+  left:0;
+  height: 20px;
+  background-color: blueviolet;
+  position: fixed;
+  width: 100vw;
+  text-align: center;
+}
 body{
-  /* background-color: blue; */
   margin: 0px;
   padding: 0px;
+} 
+#main { 
+  display: block;
+  top: 20px; 
+  position: fixed;
+  left: 0;
 }
