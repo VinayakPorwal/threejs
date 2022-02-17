@@ -10,11 +10,16 @@ nav{
   position: fixed;
   width: 100vw;
   text-align: center;
+  z-index: 2;
 }
 body{
   margin: 0px;
   padding: 0px;
+  /* scroll-behavior: smooth; */
 } 
+html {
+  scroll-behavior: smooth;
+}
 #main { 
   display: block;
   top: 20px; 
