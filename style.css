@@ -14,7 +14,11 @@ nav{
 body{
   margin: 0px;
   padding: 0px;
+  /* scroll-behavior: smooth; */
 } 
+html {
+  scroll-behavior: smooth;
+}
 #main { 
   display: block;
   top: 20px; 
